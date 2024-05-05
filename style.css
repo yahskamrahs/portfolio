@@ -316,9 +316,9 @@
 
   /* Styles for section heading */
   section h2 {
-    margin-bottom: 20px;
-    font-size: 19px;
-    color:#afaaaa;
+    margin-bottom: 23px;
+    font-size: 21px;
+    color:#ece7e7;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: left;
   }
@@ -443,7 +443,7 @@
   .container-section h2{
     font-size: 20px;
     margin-bottom: 10px;
-    color: #a0a0a2;
+    color: #dad9d9;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
   .min-container {
@@ -673,7 +673,7 @@
     .main-container {
       width: 87%; 
       margin-left: 20px;
-      height: 180px;
+      min-height: 170px;
       padding-right: 16px;
     }
     section {
@@ -683,9 +683,10 @@
       margin-left:0px;
     }
     section h2{
+      color:#ffffff; 
       margin-left:0px;
       margin-bottom: 50px;
-      font-size: 20px;
+      font-size: 22px;
     }
     .project-container {
       background-color: #ffffff;
