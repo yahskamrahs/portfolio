@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>Akshaykumar</title>
+  <link rel="icon" href="Assets/logo.ico" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="Assets/css/styles.css">
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        section.navbarr {
+            position: relative; /* Make the navbar position relative */
+            display: flex;
+            justify-content: center;
+            background-color: #14121b;
+            padding: 3px;
+            margin-left: 600px;
+            width: 350px;
+            margin-bottom: -120px;
+            border-radius: 10px;
+        }
+        section.navbarr button {
+            background-color: transparent; /* Default background */
+            padding: 10px;
+            margin: 10px 10px;
+            color: rgb(247, 247, 247); /* Text color */
+            cursor: pointer;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 16px;
+            border: none; /* Remove border */
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
+        }
+        section.navbarr button:hover {
+            background-color: rgba(255, 165, 0, 0.2); /* Light background on hover */
+        }
+        .contentt {
+            display: none;
+            margin: 20px;
+            padding: 20px;
+            font-size: 18px;
+        }
+        .active {
+            display: block;
+        }
+        .indicator {
+            position: absolute;
+            bottom: 0; /* Position at the bottom of the navbar */
+            left: 0; /* Start at the left */
+            width: 90px; /* Adjust based on your button width */
+            height: 2px; /* Height of the indicator */
+            background-color: orange; /* Indicator color */
+            transition: left 0.3s ease; /* Sliding transition */
+        }
+        @media screen and (max-width: 600px){
+
+          section.navbarr {
+            position: relative; /* Make the navbar position relative */
+            display: flex;
+            justify-content: center;
+            padding: 3px;
+            margin-left: 95px;
+            width: 350px;
+            margin-bottom: -320px;
+            border-radius: 10px;
+        }
+        }
+</style>
+</head>
+
+<body>
+
+
+  <!-- Desktop Navbar -->
+  <div class="nav_bar">
+    <ul>
+      <br>
+      <span>Navigate:</span>
+      <br>
+      <br>
+      <li><img class="logo" src="Assets/home.png" alt="Logo"> <a href="#">Home</a></li>
+      <li><img class="logo" src="Assets/projects.png" alt="Logo"> <a href="#project"
+          onclick="scrollToSection('#project')">Projects</a></li>
+      <li><img class="logo" src="Assets/what.png" alt="Logo"> <a href="#what">What I Know</a></li>
+      <li><img class="logo" src="Assets/more.png" alt="Logo"> <a href="#more">More</a></li>
+      <li><img class="logo" src="Assets/folder.png" alt="Logo"> <a href="#file">Files</a></li>
+      <br>
+      <br>
+      <span>Socials:</span>
+      <!-- Adding more list items for demonstration purposes -->
+      <li><img class="logo" src="Assets/instagram.png" alt="Logo"> <a
+          href="https://www.instagram.com/yahska_amrahs">Instagram</a></li>
+      <li><img class="logo" src="Assets/github.png" alt="Logo"> <a href="https://github.com/yahskamrahs">Github</a></li>
+      <li><img class="logo" src="Assets/linkedin.png" alt="Logo"> <a
+          href="https://www.linkedin.com/in/akshaykumar-sharma-b803a6264?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Linkdin</a>
+      </li>
+      <li><img class="logo" src="Assets/twitter.png" alt="Logo"> <a
+          href="https://twitter.com/i/flow/login?redirect_after_login=%2Fyahskaamrahs">Twitter</a></li>
+
+    </ul>
+  </div>
+
+
+
+
+
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-content">
+
+      <!-- Contact button -->
+      <button class="contact-btn" onclick="sendEmail()">
+        Contact Me <img class="logo" src="Assets/contact.png" alt="Logo">
+      </button>
+      <div class="menu-btn" onclick="toggleNav()">&#9776;</div>
+      <!-- Green circles -->
+      <div class="green-circle"></div>
+      <div class="green-circle" style="left: 73px;"></div>
+    </div>
+
+
+     <!--Mobile Navigation Bar-->
+    <nav id="nav">
+      <ul>
+        <span>Navigate:</span>
+        <br>
+        <br>
+        <li><img class="logo" src="Assets/home.png" alt="Logo"> <a href="#">Home</a></li>
+        <li><img class="logo" src="Assets/projects.png" alt="Logo"> <a href="#project"
+            onclick="scrollToSection('#project')">Projects</a></li>
+        <li><img class="logo" src="Assets/what.png" alt="Logo"> <a href="#what">What I Know</a></li>
+        <li><img class="logo" src="Assets/more.png" alt="Logo"> <a href="#more">More</a></li>
+        <li><img class="logo" src="Assets/folder.png" alt="Logo"> <a href="#file">Files</a></li>
+        <br>
+        <span>Socials:</span>
+        <!-- Adding more list items for demonstration purposes -->
+        <li><img class="logo" src="Assets/instagram.png" alt="Logo"> <a
+            href="https://www.instagram.com/yahska_amrahs">Instagram</a></li>
+        <li><img class="logo" src="Assets/github.png" alt="Logo"> <a href="https://github.com/yahskamrahs">Github</a>
+        </li>
+        <li><img class="logo" src="Assets/linkedin.png" alt="Logo"> <a
+            href="https://www.linkedin.com/in/akshaykumar-sharma-b803a6264?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Linkdin</a>
+        </li>
+        <li><img class="logo" src="Assets/twitter.png" alt="Logo"> <a
+            href="https://twitter.com/i/flow/login?redirect_after_login=%2Fyahskaamrahs">Twitter</a></li>
+
+      </ul>
+      <div class="close-btn" onclick="toggleNav()">X</div>
+    </nav>
+
+
+  </div>
+
+
+
+
+
+
+
+  <!-- Profile Container -->
+  
+  <div class="container" id="project">
+    <div class="background-image"></div>
+
+    <div class="background">
+      <div class="profile-photo"></div>
+      <div class="profile-text">
+        <h1>Akshaykumar Sharma</h1>
+        <h5>@yahska_amrahs</h5>
+      </div>
+      <button class="insta-btn" id="downloadButton">
+        <img class="logo" src="Assets/cv.png" alt="Logo" id="downloadButton"> Download Resume
+      </button>
+    </div>
+  </div>
+
+
+
+  <section class="navbarr">
+    <button onclick="showContent('about', this)">About Me</button>
+        <button onclick="showContent('projects', this)" class="active">Projects</button>
+        <button onclick="showContent('experience', this)">Experience</button>
+        <div class="indicator"></div> <!-- Indicator for active button -->
+  </section>
+   <!--Main Projects Section-->
+
+
+
+
+   <div id="about" class="contentt">
+    <section id="container-section">
+    <h2>About ME:</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in velit metus. Praesent vestibulum varius enim.</p>
+    <br>
+    <br>
+     </section>
+   
+   </div>
+
+
+
+
+   <div id="experience" class="contentt">
+    <section id="container-section">
+    <h2>Experience:</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mollis magna quis elit convallis facilisis.</p>
+    <br>
+    <br>
+    
+    </section>
+
+  </div>
+
+
+
+
+<div id="projects" class="contentt active">
+  <section id="container-section">
+    <h2>Projects</h2>
+    <div class="project-container" onclick="redirectTo('https://yahskamrahs.github.io/simplemath/')">
+      <img src="tumb/math.jpg" alt="SimpleMath">
+      <div class="content">
+        <h3>Simple Math</h3>
+        <p>HTML , CSS, JavaScript</p>
+      </div>
+    </div>
+
+    <div class="project-container" onclick="redirectTo('https://github.com/yahskamrahs/crash')">
+      <img src="tumb/car.jpg" alt="Image 2">
+      <div class="content">
+        <h3>Car Crash Detection</h3>
+        <p>Python,PyTorch,OpenCV,Yolov5</p>
+      </div>
+    </div>
+
+    <div class="project-container" onclick="redirectTo('https://github.com/yahskamrahs/facedetection')">
+      <img src="tumb/hand.gif" alt="Image 3">
+      <div class="content">
+        <h3>Hand Gestures</h3>
+        <p>Python,PyTorch,OpenCV,Yolov5</p>
+      </div>
+    </div>
+
+    <div class="project-container" onclick="redirectTo('https://github.com/yahskamrahs/facedetection')">
+      <img src="tumb/face.jpg" alt="Image 4">
+      <div class="content">
+        <h3>Face Detection</h3>
+        <p>Python , OpenCV , Yolov8</p>
+      </div>
+    </div>
+
+
+    <div class="clearfix"></div>
+  </section>
+
+
+
+ <!--What I Know Section-->
+  <div class="container-section" id="what">
+    <div class="main-section">
+      <h2>What I know</h2>
+      <div class="main-container">
+        <h2>Frontent</h2>
+        <div class="word ">HTML</div>
+        <div class="word red">CSS</div>
+        <div class="word yellow">JavaScript</div>
+        <div class="word purple">XML</div>
+        
+      </div>
+      <div class="main-container">
+        <h2>Backend</h2>
+        <div class="word gray">Java</div>
+        <div class="word green">PHP</div>
+        <div class="word ">JavaScript</div>
+        <div class="word red">Python</div>
+        <div class="word yellow">C</div>
+        <div class="word css">C++</div>
+      </div>
+      <div class="main-container">
+        <h2>Database</h2>
+        <div class="word orange">SQL</div>
+        <div class="word green">MySql</div>
+        <div class="word gray">MongoDB</div>
+
+      </div>
+      <div class="main-container">
+        <h2>Others</h2>
+
+        <div class="word gray">Github</div>
+        <div class="word orange">Blender</div>
+        <div class="word red">Figma</div>
+        <div class="word python">LabelImg</div>
+        <div class="word blue">Yolov8</div>
+        <div class="word purple">OpenCV</div>
+      </div>
+
+
+
+
+
+
+       <!--Blender Projects Container-->
+      <div class="min-container">
+        <h2>Blender Projects</h2>
+        <div class="list" onclick="window.location.href='https://github.com/yahskamrahs/blenderSnow'">
+          <div class="list-logo" style="background-image: url('Assets/snow-globe.png');"></div>
+          <div class="list-content">
+            <h3>Snow House</h3>
+            <p>Blender , 3D Animation</p>
+
+          </div>
+          <div class="arrow">&#x3E;</div>
+        </div>
+        <div class="list" onclick="window.location.href='https://github.com/yahskamrahs/blendercoffe'">
+          <div class="list-logo" style="background-image: url('Assets/coffee.png');"></div>
+          <div class="list-content">
+            <h3>Coffe Shop</h3>
+            <p>Blender , 3D Animation</p>
+
+          </div>
+          <div class="arrow">&#x3E;</div>
+        </div>
+        <div class="list" onclick="window.location.href='https://github.com/yahskamrahs/blenderFactory'">
+          <div class="list-logo" style="background-image: url('Assets/factory-machine.png');"></div>
+          <div class="list-content">
+            <h3>Factory Machine</h3>
+            <p>Blender, 3D Animation </p>
+
+          </div>
+          <div class="arrow">&#x3E;</div>
+        </div>
+        <div class="list" onclick="window.location.href='https://github.com/yahskamrahs/blenderGlass'">
+          <div class="list-logo" style="background-image: url('Assets/bottle.png');"></div>
+          <div class="list-content">
+            <h3>Eco-System in World</h3>
+            <p>Blender, 3D Animation </p>
+          </div>
+          <div class="arrow">&#x3E;</div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+
+  <div class="clearfix"></div>
+  
+
+ <!--Web Projects Section-->
+  <div class="blender-section" id="more">
+    <h2>Web Projects</h2>
+    <div class="blender-main">
+      <div class="box" onclick="window.location.href='https://www.example.com/page2'">
+        <img src="tumb/snake.png" alt="Image 1">
+        <div class="box-content">
+          <h3>Snake Game</h3>
+         
+          <p>&#9679; 1,897</p> <!-- Single word paragraph -->
+          <p>&#9679; 21 day ago</p> <!-- Single word paragraph -->
+        </div>
+      </div>
+      <div class="box" onclick="window.location.href=' https://yahskamrahs.github.io/docuguard/'">
+        <img src="tumb/guard.jpg" alt="Image 2">
+        <div class="box-content">
+          <h3>Docu Guardian</h3>
+         
+          <p>&#9679; 1,678</p> <!-- Single word paragraph -->
+          <p>&#9679; 23 day ago</p> <!-- Single word paragraph -->
+        </div>
+      </div>
+      <div class="box" onclick="window.location.href='https://yahskamrahs.github.io/tictactoe/'">
+        <img src="tumb/tictactoe.jpg" alt="Image 1">
+        <div class="box-content">
+          <h3>Tic Tac Toe</h3>
+         
+          <p>&#9679; 1,098</p> <!-- Single word paragraph -->
+          <p>&#9679; 24 day ago</p> <!-- Single word paragraph -->
+        </div>
+      </div>
+      <div class="box" onclick="window.location.href='https://yahskamrahs.github.io/justcompare/'">
+        <img src="tumb/justcompare.png" alt="Image 2">
+        <div class="box-content">
+          <h3>Just Compare</h3>
+        
+          <p>&#9679; 1,174</p> <!-- Single word paragraph -->
+          <p>&#9679; 27 day ago</p> <!-- Single word paragraph -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+ <!--Python Projects  Section-->
+  <div class="blender-section" id="more">
+    <h2>Python Projects</h2>
+    <div class="blender-main">
+      
+      <div class="box" onclick="window.location.href='https://github.com/yahskamrahs/pdfmerger'">
+        <img src="tumb/merge-pdf.jpg" alt="Image 1">
+        <div class="box-content">
+          <h3>PDF Merger</h3>
+          
+          <p>&#9679; 1,897</p> <!-- Single word paragraph -->
+          <p>&#9679; 9 day ago</p> <!-- Single word paragraph -->
+        </div>
+      </div>
+      <div class="box" onclick="window.location.href='https://github.com/yahskamrahs/Image-Resizer'">
+        <img src="tumb/image-resizer.jpg" alt="Image 1">
+        <div class="box-content">
+          <h3>Image Resizer</h3>
+         
+          <p>&#9679; 1,897</p> <!-- Single word paragraph -->
+          <p>&#9679; 8 day ago</p> <!-- Single word paragraph -->
+        </div>
+      </div>
+      <div class="box" onclick="window.location.href='https://github.com/yahskamrahs/Text-To-Speech'">
+        <img src="tumb/Text-To-Speech.jpg" alt="Image 1">
+        <div class="box-content">
+          <h3>Text-To-Speech</h3>
+         
+          <p>&#9679; 1,897</p> <!-- Single word paragraph -->
+          <p>&#9679; 4 day ago</p> <!-- Single word paragraph -->
+        </div>
+      </div>
+      <div class="box" onclick="window.location.href='https://github.com/yahskamrahs/Weather-App'">
+        <img src="tumb/weather-app.jpg" alt="Image 1">
+        <div class="box-content">
+          <h3>Weather App</h3>
+          
+          <p>&#9679; 1,897</p> 
+          <p>&#9679; 6 day ago</p>  
+        </div>
+      </div>
+      <div class="box" onclick="window.location.href='https://github.com/yahskamrahs/Face-ID-Attendance-'">
+        <img src="tumb/attendance.jpg" alt="Image 1">
+        <div class="box-content">
+          <h3>Face ID Attendance</h3>
+          
+          <p>&#9679; 1,897</p> 
+          <p>&#9679; 1 day ago</p>  
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+ 
+
+
+ <!--Project Files Container-->
+  <div class="file-section" id="file">
+    <div class="main-section">
+      <h2>College Files</h2>
+
+      <div class="file-container">
+        <h2>Project Files</h2>
+        <div class="list" onclick="window.location.href='https://github.com/yahskamrahs/hackathon'">
+          <div class="file-logo" style="background-image: url('Assets/file-management.png');"></div>
+          <div class="file-content">
+            <h3>Hackthon</h3>
+            <p>2 items | 18 Nov 2023</p>
+
+          </div>
+          <div class="arrow">&#x3E;</div>
+        </div>
+        <div class="list" onclick="window.location.href='https://github.com/yahskamrahs/translate'">
+          <div class="file-logo" style="background-image: url('Assets/file-management.png');"></div>
+          <div class="file-content">
+            <h3>HTML Project</h3>
+            <p>3 items | 14 Dec 2023</p>
+
+          </div>
+          <div class="arrow">&#x3E;</div>
+        </div>
+        <div class="list" onclick="window.location.href='https://github.com/yahskamrahs/int'">
+          <div class="file-logo" style="background-image: url('Assets/file-management.png');"></div>
+          <div class="file-content">
+            <h3>Web Project</h3>
+            <p>7 items | April 28 </p>
+
+          </div>
+          <div class="arrow">&#x3E;</div>
+        </div>
+        <div class="list" onclick="window.location.href='https://example.com/'">
+          <div class="file-logo" style="background-image: url('Assets/file-management.png');"></div>
+          <div class="file-content">
+            <h3>Java Project<h3>
+            <p>0 items | unknown </p>
+          </div>
+          <div class="arrow">&#x3E;</div>
+        </div>
+      </div>
+
+
+
+  <!--Other Files Container-->
+      <div class="file-container">
+        <h2>Other Files</h2>
+
+        <div class="list" onclick="window.location.href='https://example.com/'">
+          <div class="file-logo" style="background-image: url('Assets/file-management.png');"></div>
+          <div class="file-content">
+            <h3>Music</h3>
+            <p>182 items | Feb 29</p>
+          </div>
+          <div class="arrow">&#x3E;</div>
+        </div>
+
+        <div class="list" onclick="window.location.href='https://example.com/'">
+          <div class="file-logo" style="background-image: url('Assets/file-management.png');"></div>
+          <div class="file-content">
+            <h3>Anime</h3>
+            <p>&infintie; items | 1 Jan 2020</p>
+          </div>
+          <div class="arrow">&#x3E;</div>
+        </div>
+
+        <div class="list" onclick="window.location.href='https://example.com/'">
+          <div class="file-logo" style="background-image: url('Assets/file-management.png');"></div>
+          <div class="file-content">
+            <h3>DCIM</h3>
+            <p>29 items | 04 May 2019 </p>
+          </div>
+          <div class="arrow">&#x3E;</div>
+        </div>
+
+        <div class="list" onclick="window.location.href='https://example.com/'">
+          <div class="file-logo" style="background-image: url('Assets/file-management.png');"></div>
+          <div class="file-content">
+            <h3>Downloads</h3>
+            <p>999+ items | May 5 </p>
+          </div>
+          <div class="arrow">&#x3E;</div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+   function showContent(section, button) {
+            // Hide all content sections
+            var contents = document.querySelectorAll('.contentt');
+            contents.forEach(function(content) {
+                content.classList.remove('active');
+            });
+
+            // Show the selected section
+            document.getElementById(section).classList.add('active');
+
+            // Remove active class from all buttons and add to the clicked one
+            var buttons = document.querySelectorAll('.navbarr button');
+            buttons.forEach(function(btn) {
+                btn.classList.remove('active');
+                btn.style.backgroundColor = 'transparent'; // Reset background
+                btn.style.color = 'white'; // Reset text color
+            });
+
+            button.classList.add('active');
+            button.style.backgroundColor = 'orange'; // Fill active button background
+            button.style.color = 'black'; // Change text color of active button
+
+            // Move the indicator to the new button position
+            var indicator = document.querySelector('.indicator');
+            var buttonRect = button.getBoundingClientRect();
+            var navbarRect = document.querySelector('.navbarr').getBoundingClientRect();
+            indicator.style.left = (buttonRect.left - navbarRect.left + buttonRect.width / 2 - indicator.offsetWidth / 2) + 'px'; // Center the indicator
+        }
+
+        // Initial positioning of the indicator on page load
+        window.onload = function() {
+            var activeButton = document.querySelector('.navbarr button.active');
+            var indicator = document.querySelector('.indicator');
+            var buttonRect = activeButton.getBoundingClientRect();
+            var navbarRect = document.querySelector('.navbarr').getBoundingClientRect();
+            
+            // Set initial position of the indicator
+            indicator.style.left = (buttonRect.left - navbarRect.left + buttonRect.width / 2 - indicator.offsetWidth / 2) + 'px'; // Center the indicator
+            indicator.style.transition = 'none'; // Disable transition for initial positioning
+            
+            // Use requestAnimationFrame to trigger the transition after the initial position is set
+            requestAnimationFrame(() => {
+                indicator.style.transition = 'left 0.3s ease'; // Enable transition for sliding effect
+            });
+
+            // Set background color for the active button on load
+            activeButton.style.backgroundColor = 'orange'; // Fill active button background
+            activeButton.style.color = 'black'; // Change text color of active button
+        };
+</script>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
