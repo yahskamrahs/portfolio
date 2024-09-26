@@ -75,14 +75,53 @@
       /* Sliding transition */
     }
 
+    .aboutme {
+      font-family: monospace, cursive;
+      font-size: 20px;
+      margin-left: 50px;
+      font-weight: 100;
+      color: rgb(184, 183, 183);
+    }
+
+    .aboutme h4 {
+      color: rgb(242, 242, 242);
+    }
+
+    .aboutme p {
+      margin-left: 15px;
+      font-size: 19px;
+    }
+
+    .abouth2 {
+      text-align: left;
+      margin-left: 30px;
+      font-size: 23px;
+      color: azure;
+    }
+
     @media screen and (max-width: 600px) {
+      .abouth2 {
+
+        margin-left: 10px;
+        margin-bottom: 16px;
+      }
+      .aboutme {
+     padding: 3px;
+      margin-left: 25px;
+      
+    }
+      .aboutme p {
+      margin-left: 2px;
+      font-size: 19px;
+    }
+
 
       section.navbarr {
         position: relative;
         /* Make the navbar position relative */
         display: flex;
         justify-content: center;
-        background-color: black;
+        background-color: #14121b;
         padding: 10px;
         margin-left: 0px;
         width: 100%;
@@ -154,8 +193,9 @@
         <br>
         <li><img class="logo" src="Assets/home.png" alt="Logo"> <a href="#" onclick="toggleNav()">Home</a></li>
         <li><img class="logo" src="Assets/projects.png" alt="Logo"> <a href="#project"
-          onclick="toggleNav()">Projects</a></li>
-        <li><img class="logo" src="Assets/what.png" alt="Logo"> <a href="#what" onclick="toggleNav()">What I Know</a></li>
+            onclick="toggleNav()">Projects</a></li>
+        <li><img class="logo" src="Assets/what.png" alt="Logo"> <a href="#what" onclick="toggleNav()">What I Know</a>
+        </li>
         <li><img class="logo" src="Assets/more.png" alt="Logo"> <a href="#more" onclick="toggleNav()">More</a></li>
         <li><img class="logo" src="Assets/folder.png" alt="Logo"> <a href="#file" onclick="toggleNav()">Files</a></li>
         <br>
@@ -198,7 +238,9 @@
       <button class="insta-btn" id="downloadButton">
         <img class="logo" src="Assets/cv.png" alt="Logo" id="downloadButton"> Download Resume
       </button>
+
     </div>
+
   </div>
 
 
@@ -208,6 +250,7 @@
     <button onclick="showContent('projects', this)" class="active">Projects</button>
     <button onclick="showContent('experience', this)">Experience</button>
     <div class="indicator"></div> <!-- Indicator for active button -->
+
   </section>
   <!--Main Projects Section-->
 
@@ -216,10 +259,45 @@
 
   <div id="about" class="contentt">
     <section id="container-section">
-      <h2>About ME:</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in velit metus. Praesent vestibulum varius
-        enim.</p>
+      <h2 class="abouth2">About Me:</h2>
+      <div class="aboutme">
+        <b>Name:</b>
+        Akshaykumar Shivaji Sharma<br>
+        <b>DOB:</b>
+        05 December 2004 <br>
+        <b>Gender:</b>
+        Male <br>
+        <b>Email:</b>
+        sharmaaskahy0355@gmail.com <br>
+        <b>City:</b>
+        Chh. Sambhajinagar MH, India
+      </div>
       <br>
+      <h2 class="abouth2">Education:</h2>
+      <div class="aboutme">
+        <h4>Bachelor's Degree (Persuing):</h4>
+        <p>> Marathwada Intitute Of Technology CIDCO</p>
+        <p>> Bsc Information Technology(2022-2025)</p>
+        <p>> Last Sem SGPA: 9.21</p>
+        <p>> Last Sem Grade: O </p>
+        <p>> Currently: Fifth Semester</p>
+      </div>
+      <br>
+      <div class="aboutme">
+        <h4>Higher School(HSC):</h4>
+        <p>> Swapnapurti Mahavidhyalaya, Chh.Sambhajinagar</p>
+        <p>> 12th Science</p>
+        <p>> Marks: 66.67%</p>
+        <p>> Currently: Passed</p>
+      </div>
+      <br>
+      <div class="aboutme">
+        <h4>Secondary School(SSC):</h4>
+        <p>> Radhakrushna High School, Chh.Sambhajinagar</p>
+        <p>> 10th Board</p>
+        <p>> Marks: 90.00%</p>
+        <p>> Currently: Passed</p>
+      </div>
       <br>
     </section>
 
@@ -230,9 +308,13 @@
 
   <div id="experience" class="contentt">
     <section id="container-section">
-      <h2>Experience:</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mollis magna quis elit convallis facilisis.
-      </p>
+      <h2 class="abouth2">Web Developer:</h2>
+      <div class="aboutme">
+        <h4>Freelancer (Remote) | April 2023 - Present:</h4>
+        <p>> Successfully completed 5+ client projects in DevOps, delivering high-quality results on time</p>
+        <p>> Developed and maintained strongś relationships withś clients, leading to repeat business and referrals</p>
+      </div>
+
       <br>
       <br>
 
